@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Oracle TimeSheet Generator",
+  "description": "This small beauty saves your time by generating TimeSheet stubs",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://<YOURDOMAINHERE>/OA_HTML/*"
+      ],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ]
+}
